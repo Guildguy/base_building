@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwa6grmoibe3c"]
+
+[ext_resource type="PackedScene" uid="uid://cdox74eufgxcu" path="res://scenes/base_building/base/inventory/inventory-popup.tscn" id="1_dkhuk"]
+[ext_resource type="Script" uid="uid://jb65hllq3my" path="res://scenes/base_building/base/inventory/ui/inventory_trade_popup.gd" id="1_fvc5j"]
+
+[node name="InventoryTradePopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fvc5j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 297.0
+offset_bottom = 298.0
+color = Color(0, 0, 0, 0.164706)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="chest" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="chest" type="Label" parent="HBoxContainer/chest"]
+layout_mode = 2
+
+[node name="Control" parent="HBoxContainer/chest" instance=ExtResource("1_dkhuk")]
+layout_mode = 2
+
+[node name="arrow" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer/arrow"]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="HBoxContainer/arrow"]
+layout_mode = 2
+
+[node name="inventory" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="inventory" type="Label" parent="HBoxContainer/inventory"]
+layout_mode = 2
+
+[node name="Control" parent="HBoxContainer/inventory" instance=ExtResource("1_dkhuk")]
+layout_mode = 2
+
+[node name="close" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://bi7wn8f6iio8f"]
+
+[ext_resource type="Texture2D" uid="uid://dogiwypicpgxy" path="res://scenes/base_building/base/player/mario.jpeg" id="1_nkl2l"]
+[ext_resource type="PackedScene" uid="uid://cdox74eufgxcu" path="res://scenes/base_building/base/inventory/inventory-popup.tscn" id="2_lpjns"]
+[ext_resource type="PackedScene" uid="uid://bwa6grmoibe3c" path="res://scenes/base_building/base/inventory/ui/inventory_trade_popup.tscn" id="3_ovfur"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vduub"]
+size = Vector3(0.886841, 0.895988, 0.177551)
+
+[sub_resource type="QuadMesh" id="QuadMesh_nkl2l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lpjns"]
+albedo_texture = ExtResource("1_nkl2l")
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00567615, 0.470371, -0.0127258)
+shape = SubResource("BoxShape3D_vduub")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.427242, 0)
+mesh = SubResource("QuadMesh_nkl2l")
+surface_material_override/0 = SubResource("StandardMaterial3D_lpjns")
+
+[node name="InventoryPopup" parent="." instance=ExtResource("2_lpjns")]
+offset_left = 11.0
+offset_top = 13.0
+offset_right = 254.0
+offset_bottom = 53.0
+
+[node name="InventoryTradePopup" parent="." instance=ExtResource("3_ovfur")]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b78xojrnuj07"]
+
+[ext_resource type="PackedScene" uid="uid://nin7o6lxrq7p" path="res://scenes/base_building/base/lowpoly_treasure-chests.glb" id="1_hxdai"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_hxdai")]
+
+[node name="Chest-Body-2" parent="Sketchfab_model/ff01b3cd24db4afca59fe73f5ff12851_fbx/RootNode" index="1"]
+visible = false
+
+[node name="Chest-Body-3" parent="Sketchfab_model/ff01b3cd24db4afca59fe73f5ff12851_fbx/RootNode" index="2"]
+visible = false

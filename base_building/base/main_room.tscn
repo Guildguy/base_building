@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctox7fs2dqwwy"]
+
+[ext_resource type="PackedScene" uid="uid://cbi63dukril5x" path="res://scenes/base_building/base/inventory/chest.tscn" id="1_bmeyq"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rc8q8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rc8q8"]
+size = Vector3(20, 1, 20)
+
+[node name="main_room" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+mesh = SubResource("PlaneMesh_rc8q8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.1, 0)
+shape = SubResource("BoxShape3D_rc8q8")
+debug_color = Color(2.40654e-06, 0.693557, 0.454763, 0.42)
+
+[node name="chest" parent="." instance=ExtResource("1_bmeyq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.827, 0, 2.342)
