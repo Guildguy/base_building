@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cuaxv5pycfkne"]
 
-[ext_resource type="PackedScene" uid="uid://nin7o6lxrq7p" path="res://scenes/base_building/base/lowpoly_treasure-chests.glb" id="1_s6dn2"]
+[ext_resource type="PackedScene" uid="uid://nin7o6lxrq7p" path="res://scenes/base_building/assets/lowpoly_treasure-chests.glb" id="1_s6dn2"]
 
 [node name="Sketchfab_Scene" instance=ExtResource("1_s6dn2")]
 

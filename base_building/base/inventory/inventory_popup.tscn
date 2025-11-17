@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cyhp7oyteps" path="res://scenes/base_building/base/inventory/inventory_popup.gd" id="1_qiqkm"]
 [ext_resource type="FontFile" uid="uid://bd0uij4xmmpbu" path="res://fonts/PixelOperatorSC.ttf" id="2_mcbg5"]
-[ext_resource type="PackedScene" uid="uid://cqq4ymaaaid2t" path="res://scenes/base_building/base/inventory/ui/s_0.tscn" id="3_nuibd"]
+[ext_resource type="PackedScene" uid="uid://cqq4ymaaaid2t" path="res://scenes/base_building/base/inventory/ui/slots/s_0.tscn" id="3_nuibd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xi7cy"]
 bg_color = Color(0.00392157, 0.00392157, 0.00392157, 0.0352941)

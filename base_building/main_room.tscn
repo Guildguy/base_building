@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ctox7fs2dqwwy"]
 
-[ext_resource type="PackedScene" uid="uid://cbi63dukril5x" path="res://scenes/base_building/base/inventory/chest.tscn" id="1_bmeyq"]
+[ext_resource type="PackedScene" uid="uid://cbi63dukril5x" path="res://scenes/base_building/base/chest/chest.tscn" id="1_bmeyq"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rc8q8"]
 

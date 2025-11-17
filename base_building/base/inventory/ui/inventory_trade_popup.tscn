@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwa6grmoibe3c"]
 
-[ext_resource type="PackedScene" uid="uid://cdox74eufgxcu" path="res://scenes/base_building/base/inventory/inventory-popup.tscn" id="1_dkhuk"]
+[ext_resource type="PackedScene" uid="uid://cdox74eufgxcu" path="res://scenes/base_building/base/inventory/inventory_popup.tscn" id="1_dkhuk"]
 [ext_resource type="Script" uid="uid://jb65hllq3my" path="res://scenes/base_building/base/inventory/ui/inventory_trade_popup.gd" id="1_fvc5j"]
 
 [node name="InventoryTradePopup" type="Control"]

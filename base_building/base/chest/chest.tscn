@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://cbi63dukril5x"]
 
-[ext_resource type="Script" uid="uid://bhsawjc6n13nm" path="res://scenes/base_building/base/inventory/chest.gd" id="1_mxkrt"]
-[ext_resource type="PackedScene" uid="uid://b78xojrnuj07" path="res://scenes/base_building/base/inventory/closed_chest.tscn" id="2_p0370"]
-[ext_resource type="PackedScene" uid="uid://cuaxv5pycfkne" path="res://scenes/base_building/base/inventory/half_chest.tscn" id="3_dqegx"]
-[ext_resource type="PackedScene" uid="uid://bd4mhg7uoolxi" path="res://scenes/base_building/base/open_chest.tscn" id="4_x018w"]
-[ext_resource type="PackedScene" uid="uid://cdox74eufgxcu" path="res://scenes/base_building/base/inventory/inventory-popup.tscn" id="5_p0370"]
+[ext_resource type="Script" uid="uid://bhsawjc6n13nm" path="res://scenes/base_building/base/chest/chest.gd" id="1_o04ol"]
+[ext_resource type="PackedScene" uid="uid://b78xojrnuj07" path="res://scenes/base_building/base/chest/closed_chest.tscn" id="2_c1hso"]
+[ext_resource type="PackedScene" uid="uid://cuaxv5pycfkne" path="res://scenes/base_building/base/chest/half_chest.tscn" id="3_f2tml"]
+[ext_resource type="PackedScene" uid="uid://bd4mhg7uoolxi" path="res://scenes/base_building/base/chest/open_chest.tscn" id="4_yg1w6"]
+[ext_resource type="PackedScene" uid="uid://cdox74eufgxcu" path="res://scenes/base_building/base/inventory/inventory_popup.tscn" id="5_lkec8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y47pk"]
 size = Vector3(1.5, 0.5, 1.5)
@@ -13,7 +13,7 @@ size = Vector3(1.5, 0.5, 1.5)
 size = Vector3(0.512402, 0.679785, 0.775256)
 
 [node name="chest" type="Node3D"]
-script = ExtResource("1_mxkrt")
+script = ExtResource("1_o04ol")
 
 [node name="Area3D" type="Area3D" parent="."]
 
@@ -28,15 +28,15 @@ debug_color = Color(0.846156, 0, 0.135321, 0.42)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0.3, 0)
 shape = SubResource("BoxShape3D_bmeyq")
 
-[node name="closed_chest" parent="StaticBody3D" instance=ExtResource("2_p0370")]
+[node name="closed_chest" parent="StaticBody3D" instance=ExtResource("2_c1hso")]
 transform = Transform3D(-1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0, 0, 0)
 visible = false
 
-[node name="half_chest" parent="StaticBody3D" instance=ExtResource("3_dqegx")]
+[node name="half_chest" parent="StaticBody3D" instance=ExtResource("3_f2tml")]
 transform = Transform3D(-1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0, 0, 0)
 visible = false
 
-[node name="open_chest" parent="StaticBody3D" instance=ExtResource("4_x018w")]
+[node name="open_chest" parent="StaticBody3D" instance=ExtResource("4_yg1w6")]
 transform = Transform3D(-1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0, 0, 0)
 visible = false
 
@@ -45,6 +45,6 @@ transform = Transform3D(0.998982, 0, 0.0451016, 0, 1, 0, -0.0451016, 0, 0.998982
 visible = false
 text = "Pressione E para abrir"
 
-[node name="InventoryPopup" parent="." instance=ExtResource("5_p0370")]
+[node name="InventoryPopup" parent="." instance=ExtResource("5_lkec8")]
 offset_right = 0.0
 offset_bottom = 0.0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bi7wn8f6iio8f"]
 
-[ext_resource type="Texture2D" uid="uid://dogiwypicpgxy" path="res://scenes/base_building/base/player/mario.jpeg" id="1_nkl2l"]
-[ext_resource type="PackedScene" uid="uid://cdox74eufgxcu" path="res://scenes/base_building/base/inventory/inventory-popup.tscn" id="2_lpjns"]
+[ext_resource type="Texture2D" uid="uid://dogiwypicpgxy" path="res://scenes/base_building/assets/mario.jpeg" id="1_nkl2l"]
+[ext_resource type="PackedScene" uid="uid://cdox74eufgxcu" path="res://scenes/base_building/base/inventory/inventory_popup.tscn" id="2_lpjns"]
 [ext_resource type="PackedScene" uid="uid://bwa6grmoibe3c" path="res://scenes/base_building/base/inventory/ui/inventory_trade_popup.tscn" id="3_ovfur"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vduub"]
