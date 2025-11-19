@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://cursjnke20pms"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ldfs6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oo1yr"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ldfs6"]
+size = Vector3(20, 10, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j0j4a"]
+size = Vector3(8, 10, 0.2)
+
+[node name="room_right" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, -10)
+mesh = SubResource("PlaneMesh_ldfs6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.1, 0)
+shape = SubResource("BoxShape3D_oo1yr")
+debug_color = Color(2.40654e-06, 0.693557, 0.454763, 0.42)
+
+[node name="top_wall" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(0.299221, 0, 0, 0, 0.299221, 0, 0, 0, 0.299221, 0, 1.5, -3)
+shape = SubResource("BoxShape3D_ldfs6")
+
+[node name="left_wall" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -3, 1.5, 0)
+shape = SubResource("BoxShape3D_ldfs6")
+
+[node name="right_wall" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 3, 1.5, 0)
+shape = SubResource("BoxShape3D_ldfs6")
+
+[node name="half_wall1" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.8, 1.5, 3)
+shape = SubResource("BoxShape3D_j0j4a")
+
+[node name="half_wall2" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1.8, 1.5, 3)
+shape = SubResource("BoxShape3D_j0j4a")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -10)
+light_energy = 6.377

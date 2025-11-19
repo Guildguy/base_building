@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctox7fs2dqwwy"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rc8q8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rc8q8"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bmeyq"]
+size = Vector3(20, 10, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y47pk"]
+size = Vector3(8, 10, 0.2)
+
+[node name="main_room" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+mesh = SubResource("PlaneMesh_rc8q8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.1, 0)
+shape = SubResource("BoxShape3D_rc8q8")
+debug_color = Color(2.40654e-06, 0.693557, 0.454763, 0.42)
+
+[node name="right_wall" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 3, 1.5, 0)
+shape = SubResource("BoxShape3D_bmeyq")
+
+[node name="down_wall" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 1.5, 3)
+shape = SubResource("BoxShape3D_bmeyq")
+
+[node name="half_wall1" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.8, 1.5, -3)
+shape = SubResource("BoxShape3D_y47pk")
+
+[node name="half_wall2" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, -1.8, 1.5, -3)
+shape = SubResource("BoxShape3D_y47pk")
+
+[node name="half_wall3" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -3, 1.5, -1.8)
+shape = SubResource("BoxShape3D_y47pk")
+
+[node name="half_wall4" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, -3, 1.5, 1.8)
+shape = SubResource("BoxShape3D_y47pk")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+light_energy = 6.377

@@ -1,0 +1,59 @@
+[gd_scene load_steps=13 format=3 uid="uid://bu2g43eu8nrqe"]
+
+[ext_resource type="PackedScene" uid="uid://ctox7fs2dqwwy" path="res://scenes/base_building/base/main_room.tscn" id="1_ljoyx"]
+[ext_resource type="PackedScene" uid="uid://btl1n3qagxice" path="res://scenes/base_building/base/room_left.tscn" id="2_5s2u6"]
+[ext_resource type="PackedScene" uid="uid://bi7wn8f6iio8f" path="res://scenes/base_building/base/player/player.tscn" id="2_dbw1w"]
+[ext_resource type="Script" uid="uid://dspa6lle5nrfp" path="res://scenes/base_building/base/player/player.gd" id="3_n4pkc"]
+[ext_resource type="PackedScene" uid="uid://b2u4wtqxe3clg" path="res://scenes/base_building/base/corridor_left.tscn" id="3_pw041"]
+[ext_resource type="PackedScene" uid="uid://cursjnke20pms" path="res://scenes/base_building/base/room_right.tscn" id="4_bb0n6"]
+[ext_resource type="PackedScene" uid="uid://buru48yegg3my" path="res://scenes/base_building/base/corridor_top.tscn" id="5_gmy1r"]
+[ext_resource type="Texture2D" uid="uid://bcx4aatigy2vi" path="res://scenes/base_building/base/cave.png" id="8_gmy1r"]
+[ext_resource type="PackedScene" uid="uid://cbi63dukril5x" path="res://scenes/base_building/base/chest/chest.tscn" id="9_3feqp"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3feqp"]
+panorama = ExtResource("8_gmy1r")
+
+[sub_resource type="Sky" id="Sky_d8yrn"]
+sky_material = SubResource("PanoramaSkyMaterial_3feqp")
+
+[sub_resource type="Environment" id="Environment_ptitm"]
+background_mode = 2
+sky = SubResource("Sky_d8yrn")
+
+[node name="Base" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.769923, 0.638137, 0, -0.638137, 0.769923, 0, 2.24171, 5.02211)
+light_energy = 0.395
+light_indirect_energy = 1.43
+shadow_enabled = true
+shadow_bias = 0.21
+shadow_blur = 7.364
+directional_shadow_split_1 = 0.28
+
+[node name="main_room" parent="." instance=ExtResource("1_ljoyx")]
+
+[node name="room_left" parent="." instance=ExtResource("2_5s2u6")]
+
+[node name="corridor_left" parent="." instance=ExtResource("3_pw041")]
+
+[node name="room_top" parent="." instance=ExtResource("4_bb0n6")]
+
+[node name="corridor_top" parent="." instance=ExtResource("5_gmy1r")]
+
+[node name="Player" parent="." instance=ExtResource("2_dbw1w")]
+physics_interpolation_mode = 1
+disable_mode = 1
+floor_block_on_wall = false
+script = ExtResource("3_n4pkc")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(0.945615, -0.0841906, 0.314204, 1.23884e-08, 0.965926, 0.258819, -0.325288, -0.244743, 0.913394, 1.04775, 1.49725, 3.27299)
+fov = 66.5
+near = 0.017
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ptitm")
+
+[node name="chest" parent="." instance=ExtResource("9_3feqp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.91224, 0.039848, 2.24136)

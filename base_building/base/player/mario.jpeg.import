@@ -2,23 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qlri2cjpn8uw"
-path="res://.godot/imported/lowpoly_treasure-chests_1.png-9124da4221c238548f0e614a0c887dce.ctex"
+uid="uid://dogiwypicpgxy"
+path.s3tc="res://.godot/imported/mario.jpeg-8351a3f2b440aa05aea4770144983307.s3tc.ctex"
 metadata={
-"vram_texture": false
-}
-generator_parameters={
-"md5": "6474e9c6b3a9c5faeeacbe3334194295"
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://scenes/base_building/assets/lowpoly_treasure-chests_1.png"
-dest_files=["res://.godot/imported/lowpoly_treasure-chests_1.png-9124da4221c238548f0e614a0c887dce.ctex"]
+source_file="res://scenes/base_building/base/player/mario.jpeg"
+dest_files=["res://.godot/imported/mario.jpeg-8351a3f2b440aa05aea4770144983307.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
@@ -34,4 +32,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

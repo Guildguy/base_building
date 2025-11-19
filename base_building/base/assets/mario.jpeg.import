@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dogiwypicpgxy"
-path.s3tc="res://.godot/imported/mario.jpeg-c1c9e78e6545ae15d342250dfe07892a.s3tc.ctex"
+path.s3tc="res://.godot/imported/mario.jpeg-1e1ce6f6b91a06b0c3bf5ffe834d343a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://scenes/base_building/assets/mario.jpeg"
-dest_files=["res://.godot/imported/mario.jpeg-c1c9e78e6545ae15d342250dfe07892a.s3tc.ctex"]
+source_file="res://scenes/base_building/base/assets/mario.jpeg"
+dest_files=["res://.godot/imported/mario.jpeg-1e1ce6f6b91a06b0c3bf5ffe834d343a.s3tc.ctex"]
 
 [params]
 

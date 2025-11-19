@@ -2,24 +2,23 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmsuduxlehga8"
-path.s3tc="res://.godot/imported/lowpoly_treasure-chests_0.jpg-92f3e805d705fc397b26756dc1db589d.s3tc.ctex"
+uid="uid://qlri2cjpn8uw"
+path="res://.godot/imported/lowpoly_treasure-chests_1.png-c3832043367ca3f30e72ebc86f243b12.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 generator_parameters={
-"md5": "623b39846e6481ea0033b975d9243609"
+"md5": "6474e9c6b3a9c5faeeacbe3334194295"
 }
 
 [deps]
 
-source_file="res://scenes/base_building/assets/lowpoly_treasure-chests_0.jpg"
-dest_files=["res://.godot/imported/lowpoly_treasure-chests_0.jpg-92f3e805d705fc397b26756dc1db589d.s3tc.ctex"]
+source_file="res://scenes/base_building/base/assets/lowpoly_treasure-chests_1.png"
+dest_files=["res://.godot/imported/lowpoly_treasure-chests_1.png-c3832043367ca3f30e72ebc86f243b12.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
@@ -35,4 +34,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

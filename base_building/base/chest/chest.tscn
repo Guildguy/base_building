@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cbi63dukril5x"]
+[gd_scene load_steps=9 format=3 uid="uid://cbi63dukril5x"]
 
 [ext_resource type="Script" uid="uid://bhsawjc6n13nm" path="res://scenes/base_building/base/chest/chest.gd" id="1_o04ol"]
 [ext_resource type="PackedScene" uid="uid://b78xojrnuj07" path="res://scenes/base_building/base/chest/closed_chest.tscn" id="2_c1hso"]
+[ext_resource type="PackedScene" uid="uid://bwa6grmoibe3c" path="res://scenes/base_building/base/inventory/ui/inventory_trade_popup.tscn" id="2_f2tml"]
 [ext_resource type="PackedScene" uid="uid://cuaxv5pycfkne" path="res://scenes/base_building/base/chest/half_chest.tscn" id="3_f2tml"]
 [ext_resource type="PackedScene" uid="uid://bd4mhg7uoolxi" path="res://scenes/base_building/base/chest/open_chest.tscn" id="4_yg1w6"]
 [ext_resource type="PackedScene" uid="uid://cdox74eufgxcu" path="res://scenes/base_building/base/inventory/inventory_popup.tscn" id="5_lkec8"]
@@ -14,6 +15,8 @@ size = Vector3(0.512402, 0.679785, 0.775256)
 
 [node name="chest" type="Node3D"]
 script = ExtResource("1_o04ol")
+
+[node name="InventoryTradePopup" parent="." instance=ExtResource("2_f2tml")]
 
 [node name="Area3D" type="Area3D" parent="."]
 
@@ -30,7 +33,6 @@ shape = SubResource("BoxShape3D_bmeyq")
 
 [node name="closed_chest" parent="StaticBody3D" instance=ExtResource("2_c1hso")]
 transform = Transform3D(-1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0, 0, 0)
-visible = false
 
 [node name="half_chest" parent="StaticBody3D" instance=ExtResource("3_f2tml")]
 transform = Transform3D(-1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, 0, 0, 0)
