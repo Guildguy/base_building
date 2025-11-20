@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var interaction_key := "E"
+@export var interaction_key := "inventory"
 var player_body = null
 var player_in_range := false
 var is_animating := false
@@ -20,11 +20,6 @@ func _ready():
 	label.visible = false
 	_show_only(closed)
 
-	#var popup_scene = preload("res://scenes/base_building/base/inventory/inventory-popup.tscn")
-	#popup_instance = popup_scene.instantiate()
-#	get_tree().root.call_deferred("add_child", popup_instance)
-#	popup_instance.hide()
-
 func _process(_delta):
 	if player_in_range and Input.is_action_just_pressed(interaction_key):
 		_interact()
@@ -32,10 +27,8 @@ func _process(_delta):
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		player_in_range = true
-		label.visible = true
-	if body.name == "Player":
-		player_in_range = true
 		player_body = body
+		label.visible = true
 
 func _on_body_exited(body):
 	if body.is_in_group("player"):
@@ -51,8 +44,6 @@ func _interact():
 		_open_trade()
 	else:
 		_close_chest()
-	if player_body:
-		player_body.open_trade_popup(self)
 
 func _open_trade():
 	is_animating = true
@@ -63,12 +54,8 @@ func _open_trade():
 	await get_tree().create_timer(0.1).timeout
 	_show_only(open)
 
-	#popup_instance.show()
-	#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-
 	is_animating = false
 	var player = get_tree().get_first_node_in_group("player")
-	# OU use body passado no _body_entered, se preferir
 
 	if player:
 		player.open_trade_popup(self)

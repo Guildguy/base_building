@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbi63dukril5x"]
+[gd_scene load_steps=8 format=3 uid="uid://cbi63dukril5x"]
 
 [ext_resource type="Script" uid="uid://bhsawjc6n13nm" path="res://scenes/base_building/base/chest/chest.gd" id="1_o04ol"]
 [ext_resource type="PackedScene" uid="uid://b78xojrnuj07" path="res://scenes/base_building/base/chest/closed_chest.tscn" id="2_c1hso"]
 [ext_resource type="PackedScene" uid="uid://bwa6grmoibe3c" path="res://scenes/base_building/base/inventory/ui/inventory_trade_popup.tscn" id="2_f2tml"]
 [ext_resource type="PackedScene" uid="uid://cuaxv5pycfkne" path="res://scenes/base_building/base/chest/half_chest.tscn" id="3_f2tml"]
 [ext_resource type="PackedScene" uid="uid://bd4mhg7uoolxi" path="res://scenes/base_building/base/chest/open_chest.tscn" id="4_yg1w6"]
-[ext_resource type="PackedScene" uid="uid://cdox74eufgxcu" path="res://scenes/base_building/base/inventory/inventory_popup.tscn" id="5_lkec8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y47pk"]
 size = Vector3(1.5, 0.5, 1.5)
@@ -17,6 +16,8 @@ size = Vector3(0.512402, 0.679785, 0.775256)
 script = ExtResource("1_o04ol")
 
 [node name="InventoryTradePopup" parent="." instance=ExtResource("2_f2tml")]
+offset_right = 0.0
+offset_bottom = 0.0
 
 [node name="Area3D" type="Area3D" parent="."]
 
@@ -46,7 +47,3 @@ visible = false
 transform = Transform3D(0.998982, 0, 0.0451016, 0, 1, 0, -0.0451016, 0, 0.998982, -0.0214034, 1.11114, 0.0113367)
 visible = false
 text = "Pressione E para abrir"
-
-[node name="InventoryPopup" parent="." instance=ExtResource("5_lkec8")]
-offset_right = 0.0
-offset_bottom = 0.0

@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://ctox7fs2dqwwy" path="res://scenes/base_building/base/main_room.tscn" id="1_ljoyx"]
 [ext_resource type="PackedScene" uid="uid://btl1n3qagxice" path="res://scenes/base_building/base/room_left.tscn" id="2_5s2u6"]
-[ext_resource type="PackedScene" uid="uid://bi7wn8f6iio8f" path="res://scenes/base_building/base/player/player.tscn" id="2_dbw1w"]
-[ext_resource type="Script" uid="uid://dspa6lle5nrfp" path="res://scenes/base_building/base/player/player.gd" id="3_n4pkc"]
+[ext_resource type="PackedScene" uid="uid://bi7wn8f6iio8f" path="res://scenes/base_building/player/player.tscn" id="2_dbw1w"]
+[ext_resource type="Script" uid="uid://dspa6lle5nrfp" path="res://scenes/base_building/player/player.gd" id="3_n4pkc"]
 [ext_resource type="PackedScene" uid="uid://b2u4wtqxe3clg" path="res://scenes/base_building/base/corridor_left.tscn" id="3_pw041"]
 [ext_resource type="PackedScene" uid="uid://cursjnke20pms" path="res://scenes/base_building/base/room_right.tscn" id="4_bb0n6"]
 [ext_resource type="PackedScene" uid="uid://buru48yegg3my" path="res://scenes/base_building/base/corridor_top.tscn" id="5_gmy1r"]
 [ext_resource type="Texture2D" uid="uid://bcx4aatigy2vi" path="res://scenes/base_building/base/cave.png" id="8_gmy1r"]
-[ext_resource type="PackedScene" uid="uid://cbi63dukril5x" path="res://scenes/base_building/base/chest/chest.tscn" id="9_3feqp"]
+[ext_resource type="PackedScene" uid="uid://cbi63dukril5x" path="res://scenes/base_building/chest/chest.tscn" id="9_3feqp"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_3feqp"]
 panorama = ExtResource("8_gmy1r")

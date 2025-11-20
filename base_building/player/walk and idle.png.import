@@ -2,23 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qlri2cjpn8uw"
-path="res://.godot/imported/lowpoly_treasure-chests_1.png-c3832043367ca3f30e72ebc86f243b12.ctex"
+uid="uid://b6sm037gcefr0"
+path.s3tc="res://.godot/imported/walk and idle.png-d29045b6390b747ad168892af2acc36a.s3tc.ctex"
 metadata={
-"vram_texture": false
-}
-generator_parameters={
-"md5": "6474e9c6b3a9c5faeeacbe3334194295"
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://scenes/base_building/base/assets/lowpoly_treasure-chests_1.png"
-dest_files=["res://.godot/imported/lowpoly_treasure-chests_1.png-c3832043367ca3f30e72ebc86f243b12.ctex"]
+source_file="res://scenes/base_building/player/walk and idle.png"
+dest_files=["res://.godot/imported/walk and idle.png-d29045b6390b747ad168892af2acc36a.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
@@ -34,4 +32,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

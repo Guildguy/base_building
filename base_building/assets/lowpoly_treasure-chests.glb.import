@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://nin7o6lxrq7p"
-path="res://.godot/imported/lowpoly_treasure-chests.glb-144afa7d90aee7d43a47e0d2e2bf3cd3.scn"
+path="res://.godot/imported/lowpoly_treasure-chests.glb-79aa88072890daac598f3316b2d99fbc.scn"
 
 [deps]
 
-source_file="res://scenes/base_building/base/assets/lowpoly_treasure-chests.glb"
-dest_files=["res://.godot/imported/lowpoly_treasure-chests.glb-144afa7d90aee7d43a47e0d2e2bf3cd3.scn"]
+source_file="res://scenes/base_building/assets/lowpoly_treasure-chests.glb"
+dest_files=["res://.godot/imported/lowpoly_treasure-chests.glb-79aa88072890daac598f3316b2d99fbc.scn"]
 
 [params]
 
